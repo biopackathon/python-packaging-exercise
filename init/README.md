@@ -1,17 +1,17 @@
 # Level0
 
-Python言語においてディレクトリ = パッケージ、ファイル = モジュールです。
+Python言語においてパッケージとはディレクトリ、モジュールとはPythonのスクリプトファイルのことです。
 
 そのため、極端な話しとして、Pythonスクリプトファイルがどこかディレクトリに格納されていればそれはパッケージです。
 
 例えば、`package0`というデイレクトリに、`my_module.py`というPythonスクリプトファイルがあり、その中に`my_array`や`my_func`といったPythonオブジェクトが記述されていたとします。
 
 ```
-package0/
-|-- my_module.py
+package0
+└── my_module.py
 ```
 
-この場合、以下のコードを実行することで、`my_array`や`my_func`が直ちに参照可能となります。
+この場合、以下のようなコードを実行することで、`my_array`や`my_func`が直ちに参照可能となります。
 
 ## import パッケージ名.モジュール名
 
@@ -81,9 +81,9 @@ array([1, 2, 3])
 ここでは、先ほどのpackage0をコピーしてpackage1とした上で、以下のように`__init__.py`をpackage1以下に配置し、
 
 ```
-package1/
-|-- __init__.py
-|-- my_module.py
+package1
+├── __init__.py
+└── my_module.py
 ```
 
 `__init__.py`に`from .my_module import *`、`my_module.py`に`__all__ = ['my_array', 'my_func']`という追記を行いました。
@@ -113,6 +113,21 @@ package1では、
 例えば[scikit-learn](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn)のGitHubを参照すると、`sklearn`以下に、`cluster`や`svm`といったサブパッケージが配置されているのがわかります。
 
 この場合も、Level1の時と同様に、各ディレクトリごとに`__init__.py`が配置されます。
+
+```
+package2
+├── __init__.py
+├── my_module.py
+├── subpackage1
+│   ├── __init__.py
+│   └── my_module.py
+└── subpackage2
+    ├── __init__.py
+    ├── my_module.py
+    └── subpackage3
+        ├── __init__.py
+        └── my_module.py
+```
 
 サブパッケージ以下にあるモジュールを参照する場合は、以下のように書きます（上書きを避けるため、ここでは*import パッケージ名.モジュール名*の書き方を利用）。
 

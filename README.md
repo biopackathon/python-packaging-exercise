@@ -1,14 +1,14 @@
 # python-packaging-exercise
 Pythonパッケージ開発の練習
 
-## 0. init/
+## [0. init/](/init/README.md)
 - Python言語においてパッケージ = ディレクトリ、モジュール = ファイルであることを実感する
 - `__init__.py`, `__all__`, サブパッケージを習得する
 
 Pythonパッケージ開発は、ビルドやリリースの仕方に関して以下の2つに大別されるため、各々のやり方を試す
 
-## 1. setuptools_twine（旧方式）
+## [1. setuptools_twine（旧方式）](/setuptools_twine/README.md)
 - `setuptools`や、`twine`といったツールを利用したやり方
 
-## 2. poetry（新方式）
+## [2. poetry（新方式）](/poetry/README.md)
 - `poetry`コマンドでパッケージングを一元管理するやり方

@@ -1,7 +1,7 @@
 # python-packaging-exercise
 Pythonパッケージ開発の練習
 
-## init/
+## 0. init/
 - Python言語においてパッケージ = ディレクトリ、モジュール = ファイルであることを実感する
 - `__init__.py`, `__all__`, サブパッケージを習得する
 

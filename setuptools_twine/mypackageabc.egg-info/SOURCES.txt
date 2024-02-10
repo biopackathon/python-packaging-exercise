@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+mypackageabc/__init__.py
+mypackageabc/my_module.py
+mypackageabc.egg-info/PKG-INFO
+mypackageabc.egg-info/SOURCES.txt
+mypackageabc.egg-info/dependency_links.txt
+mypackageabc.egg-info/requires.txt
+mypackageabc.egg-info/top_level.txt
+tests/__init__.py
+tests/test_my_array.py
+tests/test_my_func.py

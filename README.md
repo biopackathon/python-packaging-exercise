@@ -10,5 +10,5 @@ Pythonパッケージ開発は、ビルドやリリースの仕方に関して�
 ## 1. setuptools_twine（旧方式）
 - `setuptools`や、`twine`といったツールを利用したやり方
 
-## 3. poetry（新方式）
+## 2. poetry（新方式）
 - `poetry`コマンドでパッケージングを一元管理するやり方

@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "mypackageabc"
+version = "0.99.1"
+description = "My package description"
+authors = ["Koki Tsuyuzaki <k.t.the-answer@hotmail.co.jp>"]
+maintainers = ["Koki Tsuyuzaki <k.t.the-answer@hotmail.co.jp>"]
+readme = "README.md"
+repository = "https://github.com/biopackathon/python-packaging-exercise"
+keywords = ["keyword1", "keyword2"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.2.6"
+sphinx-rtd-theme = "^2.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.1"
+flake8 = "^7.0.0"
+
+[project]
+license = {file = "LICENSE"}
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

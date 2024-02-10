@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mypackageabc
+Version: 0.99.0
+Summary: My package description
+Home-page: https://github.com/biopackathon/python-packaging-exercise
+Author: Koki Tsuyuzaki
+Author-email: k.t.the-answer@hotmail.co.jp
+Keywords: keyword1,keyword2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+
+My package is great!!!!!!

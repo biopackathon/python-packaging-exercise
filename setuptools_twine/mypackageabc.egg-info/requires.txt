@@ -1,0 +1,8 @@
+numpy
+
+[doc]
+sphinx
+
+[test]
+pytest
+pytest-cov

@@ -96,9 +96,9 @@ def my_func(x):
 __all__ = ["my_array", "my_func"]
 ```
 
-なお`"""`で挟んだブロック記法はDocstringという関数のドキュメントを生成する仕組みに関係しており、このように書くことで、パッケージロード後`help(関数名)`とすることで、この説明文が画面に出力されるようになります。
+なお`"""`で挟んだブロック記法はDocstringという関数のドキュメントを生成する仕組みに関係しており、このように書くことで、パッケージロード後`help(オブジェクト名)`とすることで、この説明文が画面に出力されるようになります。
 
-DocstringにはReStructuredTextスタイル、Numpyスタイル、Googleスタイルなどありますが、今回はGoogleスタイルを採用しました。
+Docstringの書き方（スタイル）にはReStructuredTextスタイル、Numpyスタイル、Googleスタイル、Sphinxスタイルなどありますが、見やすさ、シンプルさから今回はGoogleスタイルを採用しました。
 
 以下のように`__init__.py`も設置しておきます。
 
@@ -320,7 +320,7 @@ twine upload --repository-url https://test.pypi.org/legacy/ dist/* -u "__token__
 
 これにより、
 
-https://test.pypi.org/project/mypackageabc/
+https://test.pypi.org/project/mypackageabc/0.99.0/
 
 のようなWebサイトが作成され、
 
@@ -340,4 +340,8 @@ pip install -i https://test.pypi.org/simple/ mypackageabc
 
 * [Actions/Choose a workflow](https://github.com/biopackathon/python-packaging-exercise/actions/new)のページで推薦されたもの
 
+![](../images/Workflow1.png)
+
 それ以外にも、(Test)PyPIへのリリースの自動化を行う`python-publish.yml`や、Release PleaseでGitHubのリリースノートを自動更新するのも良いでしょう（cf. [GitHub Releaseの解説 @ Bio”Pack”athon2023#01](https://togotv.dbcls.jp/en/20230116.html)）
+
+![](../images/Workflow2.png)

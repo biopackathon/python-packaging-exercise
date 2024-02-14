@@ -53,7 +53,6 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -91,6 +90,7 @@ poetry add numpy # 関数の実装
 
 ```toml
 # pyproject.toml
+
 [tool.poetry.dependencies]
 python = "^3.10"
 numpy = "^1.26.3"
@@ -110,6 +110,7 @@ poetry add --group dev black # Formatter
 
 ```toml
 # pyproject.toml
+
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^4.1.0"
@@ -229,6 +230,11 @@ poetry config pypi-token.testpypi "Test PyPIのAPI Token"
 ```shell
 poetry publish -r testpypi
 ```
+これにより、
+
+https://test.pypi.org/project/mypackageabc/0.99.1/
+
+のようなWebサイトが作成され、作成したパッケージが、誰でも使えるようになりました。
 
 ## 6.2 PyPIへのリリース
 

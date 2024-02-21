@@ -28,15 +28,15 @@ poetry new mypackageabc
 
 パッケージを構成するディレクトリ、ファイルの最小限のものが何なのかがわかり、そこからボトムアップに適宜拡張していく開発方針になるので、自分としてはこちらの方がやりやすいと感じました。
 
-## 2.1. パッケージ、モジュール
+## 1.1. パッケージ、モジュール
 
 `mypackageabc/mypackageabc/`以下に、`setuptools_twine`の時と同様に`my_module.py`と`__init__.py`を配置します。
 
-## 2.2. LICENSE
+## 1.2. LICENSE
 
 `setuptools_twine`と同じ`LICENSE`ファイルを配置します。
 
-## 2.3. pyproject.toml
+## 1.3. pyproject.toml
 
 これが一番重要な設定ファイルになります。
 
@@ -60,7 +60,7 @@ build-backend = "poetry.core.masonry.api"
 
 あとは[Poetry doumentation](https://cocoatomo.github.io/poetry-ja/pyproject/)の説明に従い、適宜加筆・修正していきましょう。
 
-## 2.4. 仮想環境構築
+## 1.4. 仮想環境構築
 
 `poetry`が提供している仮想環境を利用します。
 
@@ -78,7 +78,7 @@ poetry shell
 poetry run 何かコマンド
 ```
 
-## 2.5. 依存パッケージの追加
+## 1.5. 依存パッケージの追加
 
 実装したオブジェクトに利用した依存パッケージは、以下のように`poetry add`コマンドを実行します。
 
@@ -156,7 +156,7 @@ files = [
 
 [Poetryの公式ドキュメント](https://python-poetry.org/docs/basic-usage/#committing-your-poetrylock-file-to-version-control)では、第三者にパッケージを配布する際には、`poetry.lock`を含めないか、常に`poetry.lock`の内容を最新のものに更新し続けるやり方が紹介されています。
 
-# 3. テスト
+# 2. テスト
 
 `tests`以下に`setuptools_twine`と同じ`test_my_array.py`と`test_my_func.py`を配置します。
 
@@ -167,7 +167,7 @@ poetry run pytest -v
 poetry run pytest --cov=mypackageabc -v
 ```
 
-# 4. インストール
+# 3. インストール
 
 以下のようにして、Pythonに自作のパッケージをインストールします。
 
@@ -177,7 +177,7 @@ poetry install
 
 `poetry`では、インストールはデフォルトでeditableモードになっています。
 
-# 5. ビルド
+# 4. ビルド
 
 ```shell
 poetry build
@@ -205,13 +205,13 @@ poetry build
     └── test_my_func.py
 ```
 
-# 6. 配布
+# 5. 配布
 
 `poetry`コマンドを使って、作成したパッケージをTestPyPI(練習用レポジトリ)
 やPyPI(練習用レポジトリ)に公開します。
 （`setuptools_twine`の時と同様、事前にアカウント登録をしている前提です）
 
-## 6.1 TestPyPIへのリリース
+## 5.1 TestPyPIへのリリース
 
 まず`testpypi`という名前で、TestPyPIのURLを登録します。
 
@@ -236,7 +236,7 @@ https://test.pypi.org/project/mypackageabc/0.99.1/
 
 のようなWebサイトが作成され、作成したパッケージが、誰でも使えるようになりました。
 
-## 6.2 PyPIへのリリース
+## 5.2 PyPIへのリリース
 
 手順は、TestPyPIの時と同様です。
 
@@ -245,6 +245,6 @@ poetry config pypi-token.pypi "PyPIのAPI Token"
 poetry publish
 ```
 
-# 7. CI
+# 6. CI
 
 ```setuptools_twine```と同じ```python-package.yml```今回作成したパッケージにも適用しました。
